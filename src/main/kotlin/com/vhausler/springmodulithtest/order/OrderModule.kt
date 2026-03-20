@@ -1,4 +1,7 @@
 package com.vhausler.springmodulithtest.order
 
-class OrderModule {
-}
+import org.springframework.modulith.ApplicationModule
+
+@Suppress("unused")
+@ApplicationModule
+class OrderModule

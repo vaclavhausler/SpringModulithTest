@@ -20,13 +20,20 @@ repositories {
 }
 
 extra["springModulithVersion"] = "2.0.3"
+extra["mockitoKotlinVersion"] = "5.1.0"
 
 dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
+    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.springframework.modulith:spring-modulith-starter-core")
-    testImplementation("org.springframework.boot:spring-boot-starter-test")
+
+    testImplementation("com.h2database:h2")
+    testImplementation("org.mockito:mockito-core")
+    testImplementation("org.mockito.kotlin:mockito-kotlin:${property("mockitoKotlinVersion")}")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
+    testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.springframework.modulith:spring-modulith-starter-test")
+
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 

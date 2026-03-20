@@ -1,4 +1,8 @@
 package com.vhausler.springmodulithtest.order.api
 
-class OrderCreatedEventApi {
+@org.springframework.modulith.NamedInterface("api")
+interface OrderCreatedEventApi {
+    val orderId: String
+    val productId: String
+    val quantity: Int
 }

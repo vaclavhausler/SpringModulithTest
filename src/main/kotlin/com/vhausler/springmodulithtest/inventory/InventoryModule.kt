@@ -1,4 +1,7 @@
 package com.vhausler.springmodulithtest.inventory
 
-class InventoryModule {
-}
+import org.springframework.modulith.ApplicationModule
+
+@Suppress("unused")
+@ApplicationModule
+class InventoryModule
